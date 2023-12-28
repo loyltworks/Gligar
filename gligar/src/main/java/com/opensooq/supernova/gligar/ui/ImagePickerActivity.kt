@@ -144,7 +144,7 @@ internal class ImagePickerActivity : AppCompatActivity(), LoadMoreListener.OnLoa
             val cameraIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
             val myPhotoFileUri = FileProvider.getUriForFile(
                 this,
-                this.applicationContext.packageName + ".provider",
+                this.applicationContext.packageName + ".fileprovider",
                 photoFile!!
             )
             cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, myPhotoFileUri)
